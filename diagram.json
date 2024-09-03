@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "author": "Devadharshini Ganeshan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 96.6, "left": 44.4, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -111.77, "left": 54.4, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -146, "left": 447.2, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -30.1, "left": -48.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd1:RS", "mega:A0", "green", [ "v240", "h105.9" ] ],
+    [ "lcd1:E", "mega:A1", "green", [ "v240", "h96" ] ],
+    [ "lcd1:D4", "mega:A2", "green", [ "v240", "h57.6" ] ],
+    [ "lcd1:D5", "mega:A3", "green", [ "v240", "h57.7" ] ],
+    [ "lcd1:D6", "mega:A4", "green", [ "v240", "h57.8" ] ],
+    [ "lcd1:D7", "mega:A5", "green", [ "v240", "h57.9" ] ],
+    [ "keypad1:R1", "mega:5", "green", [ "v-86.4", "h-297.6" ] ],
+    [ "keypad1:R2", "mega:4", "green", [ "v-86.4", "h-298" ] ],
+    [ "keypad1:R3", "mega:3", "green", [ "v-86.4", "h-288.3" ] ],
+    [ "keypad1:R4", "mega:2", "green", [ "v-86.4", "h-288.2" ] ],
+    [ "keypad1:C1", "mega:6", "green", [ "v-86.4", "h-345.7" ] ],
+    [ "keypad1:C2", "mega:7", "green", [ "v-86.4", "h-364.8" ] ],
+    [ "keypad1:C3", "mega:8", "green", [ "v-86.4", "h-384.15" ] ],
+    [ "keypad1:C4", "mega:9", "green", [ "v-86.4", "h-403.5" ] ],
+    [ "pot1:GND", "lcd1:VSS", "black", [ "v-19.2", "h105.6" ] ],
+    [ "pot1:VCC", "lcd1:RW", "red", [ "v-19.2", "h124" ] ],
+    [ "lcd1:VDD", "pot1:GND", "green", [ "v19.2", "h-115.1" ] ],
+    [ "pot1:SIG", "lcd1:V0", "green", [ "v-19.2", "h114.8" ] ]
+  ],
+  "dependencies": {}
+}
